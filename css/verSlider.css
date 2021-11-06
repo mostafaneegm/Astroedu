@@ -1,0 +1,284 @@
+h1 {
+	font-size: 80px;
+}
+.css-slider-wrapper {
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.slider {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 1;
+	z-index: 0;
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	flex-wrap: wrap;
+	-webkit-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	-webkit-transition: -webkit-transform 1600ms;
+	transition: -webkit-transform 1600ms, transform 1600ms;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+/* slider-pagination */
+
+.slider-pagination {
+	position: absolute;
+	bottom: 50%;
+	left: 0;
+	text-align: center;
+	z-index: 1000;
+}
+.slider-pagination label {
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.2);
+	margin: 0 2px;
+	cursor: pointer;
+	padding: 1px;
+	display: inherit;
+	margin-bottom: 4px;
+	margin-left: 15px;
+}
+
+/* Next and previous button*/
+
+.control {
+	position: absolute;
+	top: 89%;
+	width: 25px;
+	height: 25px;
+	margin-top: -25px;
+	z-index: 55;
+	transform: rotate(90deg);
+}
+.control label {
+	z-index: 0;
+	display: none;
+	text-align: center;
+	line-height: 50px;
+	font-size: 50px;
+	color: #FFF;
+	cursor: pointer;
+	opacity: 0.2;
+}
+.control label:hover {
+	opacity: 0.5;
+}
+.next {
+	left: 50%;
+}
+.previous {
+	left: 50%;
+}
+#sliderCont {
+	transition: all 0.5s ease-out;
+}
+
+/* Slider control sliding effect */
+
+.slide-radio1:checked~#slider_1 {
+	-webkit-transform: translateX(-300%);
+	transform: translateX(-300%);
+}
+.slide-radio2:checked~#slider_2 {
+	-webkit-transform: translateX(-200%);
+	transform: translateX(-200%);
+}
+.slide-radio3:checked~#slider_3 {
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+.slide-radio4:checked~#slider_4 {
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+/* next and previous will be  active when slider moving*/
+
+.slide-radio1:checked~.next .numb2, .slide-radio2:checked~.next .numb3, .slide-radio3:checked~.next .numb4, .slide-radio4:checked~.next .numb5, .slide-radio5:checked~.next .numb6, .slide-radio6:checked~.next .numb7, .slide-radio7:checked~.next .numb8, .slide-radio2:checked~.previous .numb1, .slide-radio3:checked~.previous .numb2, .slide-radio4:checked~.previous .numb3, .slide-radio5:checked~.previous .numb4, .slide-radio6:checked~.previous .numb5, .slide-radio7:checked~.previous .numb6, .slide-radio8:checked~.previous .numb7 {
+	display: block;
+	z-index: 1
+}
+
+/* css for active current pagination */
+
+.slide-radio1:checked~.slider-pagination .page1, .slide-radio2:checked~.slider-pagination .page2, .slide-radio3:checked~.slider-pagination .page3, .slide-radio4:checked~.slider-pagination .page4, .slide-radio5:checked~.slider-pagination .page5, .slide-radio6:checked~.slider-pagination .page6, .slide-radio7:checked~.slider-pagination .page7, .slide-radio8:checked~.slider-pagination .page8 {
+	background: rgba(255, 255, 255, 1)
+}
+
+/* each slide background color */
+
+.slide1 {
+	background-image: url("../img/cosmic.png");
+	top: 0;
+	background-size: cover;
+}
+.slide2 {
+	background-image: url("../img/supercluster.png");
+	top: 100%;
+	background-size: cover;
+}
+.slide3 {
+	background-image: url("../img/galaxyclus.png");
+	top: 200%;
+	background-size: cover;
+}
+.slide4 {
+    background-image: url("../img/galaxy.png");
+	top: 300%;
+	background-size: cover;
+}
+.slide5 {
+    background-image: url("../img/constellation.png");
+	top: 400%;
+	background-size: cover;
+}
+.slide6 {
+    background-image: url("../img/starCluster.png");
+	top: 500%;
+	background-size: cover;
+}
+.slide7 {
+    background-image: url("../img/starsS.png");
+	top: 600%;
+	background-size: cover;
+}
+.slide8 {
+    background-image: url("../img/planets.png");
+	top: 700%;
+	background-size: cover;
+}
+.slider>div {
+	text-align: center;
+}
+
+/* Slider inner content */
+
+.slider h2 {
+	color: #FFF;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 45px;
+	line-height: 120%;
+	opacity: 0;
+	-webkit-transform: translateX(500px);
+	transform: translateX(500px);
+}
+.slider .button {
+	color: #FFF;
+	padding: 5px 50px;
+	background: rgba(255, 255, 255, 0.3);
+	text-decoration: none;
+	opacity: 0;
+	font-size: 15px;
+	line-height: 30px;
+	display: inline-block;
+	-webkit-transform: translateX(-500px);
+	transform: translateX(-500px);
+}
+.slider h2, .slider .button {
+	-webkit-transition: opacity 800ms, -webkit-transform 800ms;
+	transition: transform 800ms, opacity 800ms;
+	-webkit-transition-delay: 1s;
+	/* Safari */
+	transition-delay: 1s;
+}
+
+/* Slider control active css */
+
+.slide-radio1:checked~.next .numb2, .slide-radio2:checked~.next .numb3, .slide-radio3:checked~.next .numb4, .slide-radio4:checked~.next .numb5, .slide-radio5:checked~.next .numb6, .slide-radio6:checked~.next .numb7, .slide-radio7:checked~.next .numb8, .slide-radio2:checked~.previous .numb1, .slide-radio3:checked~.previous .numb2, .slide-radio4:checked~.previous .numb3, .slide-radio5:checked~.previous .numb4, .slide-radio6:checked~.previous .numb5, .slide-radio7:checked~.previous .numb6, .slide-radio8:checked~.previous .numb7 {
+	display: block;
+	z-index: 1
+}
+
+/* Slider pagination active css */
+
+.slide-radio1:checked~.slider-pagination .page1, .slide-radio2:checked~.slider-pagination .page2, .slide-radio3:checked~.slider-pagination .page3, .slide-radio4:checked~.slider-pagination .page4, .slide-radio5:checked~.slider-pagination .page5, .slide-radio6:checked~.slider-pagination .page6, .slide-radio7:checked~.slider-pagination .page7, .slide-radio8:checked~.slider-pagination .page8 {
+	background: rgba(255, 255, 255, 1)
+}
+
+/* css for sliding  effect when you click on control button*/
+
+.slide-radio1:checked~.slider {
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+}
+.slide-radio2:checked~.slider {
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.slide-radio3:checked~.slider {
+	-webkit-transform: translateY(-200%);
+	transform: translateY(-200%);
+}
+.slide-radio4:checked~.slider {
+	-webkit-transform: translateY(-300%);
+	transform: translateY(-300%);
+}
+.slide-radio5:checked~.slider {
+	-webkit-transform: translateY(0%);
+	transform: translateY(-400%);
+}
+.slide-radio6:checked~.slider {
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-500%);
+}
+.slide-radio7:checked~.slider {
+	-webkit-transform: translateY(-200%);
+	transform: translateY(-600%);
+}
+.slide-radio8:checked~.slider {
+	-webkit-transform: translateY(-300%);
+	transform: translateY(-700%);
+}
+.slide-radio1:checked~.slide1 h2, .slide-radio2:checked~.slide2 h2, .slide-radio3:checked~.slide3 h2, .slide-radio4:checked~.slide4 h2, .slide-radio5:checked~.slide5 h2, .slide-radio6:checked~.slide6 h2, .slide-radio7:checked~.slide7 h2, .slide-radio8:checked~.slide8 h2, .slide-radio1:checked~.slide1 .button, .slide-radio2:checked~.slide2 .button, .slide-radio3:checked~.slide3 .button, .slide-radio4:checked~.slide4 .button, .slide-radio5:checked~.slide5 .button, .slide-radio6:checked~.slide6 .button, .slide-radio7:checked~.slide7 .button, .slide-radio8:checked~.slide8 .button {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	opacity: 1
+}
+@media only screen and (max-width: 767px) {
+	.slider h2 {
+		font-size: 20px;
+	}
+	.slider>div {
+		padding: 0 2%
+	}
+	.control label {
+		font-size: 35px;
+	}
+	.slider .button {
+		padding: 0 30px;
+	}
+}
+#navBlock li {
+	display: inline-block;
+}
+header {
+	z-index: 20000;
+	position: absolute;
+	color: white;
+	width: 100%;
+	font-family: Arial;
+	top: 0;
+	left: 0;
+}
+#Logo {
+	margin-left: 45%;
+	font-size: 30px;
+}

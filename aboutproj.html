@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>About The Project</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet" type="text/css">
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="img/favicon.ico" rel="icon" type="image/x-icon">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<div id="background"></div>
+	<div class="container-fluid" id="container">
+		<div class="header-page">
+			<a class="menu" onclick="openNav()"><img src="img/Menu.png" alt="Menu Icon"></a> <a class="logo" href="index.html"><img src="img/logo.png" alt="Logo"></a> <a class="menulabel" onclick="openNav()"><strong>MENU</strong></a>
+			<nav class="sidenav" id="main-navigation">
+				<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">&times;</a> <a href="index.html">HOME</a> <a data-target="#learnin" data-toggle="collapse">LEARN</a>
+				<div class="collapse" id="learnin">
+					<a class="inner-detail" href="learn/universe.html">&nbsp; &nbsp; UNIVERSE STRUCTURE</a> <a class="inner-detail" href="learn/facts.html">&nbsp; &nbsp; FACTS</a> <a class="inner-detail" href="learn/faqs.html">&nbsp; &nbsp; FAQs</a>
+				</div><a data-target="#newsin" data-toggle="collapse">NEWS</a>
+				<div class="collapse" id="newsin">
+					<a class="inner-detail" href="news/news.html">&nbsp; &nbsp; LATEST NEWS</a> <a class="inner-detail" href="news/discoveries.html">&nbsp; &nbsp; LATEST DISCOVERIES</a>
+				</div><a href="skywatch.html" style="border-bottom: 1px solid rgba(255, 255, 255, 0.6);">SKYWATCHING</a> <a href="aboutproj.html">ABOUT THE PROJECT</a> <a href="contact.html">CONTACT US</a>
+			</nav>
+		</div>
+		<div id="stars" onclick="closeNav()"></div>
+		<div id="wrapper">
+			
+			<div id="content" onclick="closeNav()" style="margin-top: 150px;">
+				<img alt="Logo" src="img/Logo-about.png"><br>
+				<br>
+				<div>The purpose of the Astredu.com is to educate interested individuals to reach far beyond their existential limits and know more about their place in the universe.</div>
+                <br>
+				<h4>MEET OUR TEEM</h4>
+                <br>
+                <div id="us">
+					<a href="mailto:aya156923@bue.edu.com">AYA</a> &nbsp; <a href="mailto:hussein158267@bue.edu.com">HUSSEIN</a> &nbsp; <a href="mailto:ismaeil161254@bue.edu.com">ISMAEIL</a> &nbsp; <a href="mailto:mostafa153095@bue.edu.com">MOSTAFA</a>
+				</div>
+                <br>
+                <div>We're operation 13.1, who successfully previously introduced an Information System's A-Graded project "Astronomy Database #1". We intend to continue the development on astredu.com and to connect the front-end website with the back-end database that we've previously created.</div>
+			</div>
+		</div>
+		<footer id="footer">
+			<div id="row">
+				<div class="col-md-4">
+					<label id="follow">FOLLOW US</label>
+					<ul class="social-network social-circle">
+						<li>
+							<a class="icoRss" href="#" title="Rss"><i class="fa fa-rss"></i></a>
+						</li>
+						<li>
+							<a class="icoFacebook" href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li>
+							<a class="icoTwitter" href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+						</li>
+						<li>
+							<a class="icoGoogle" href="#" title="Google +"><i class="fa fa-google-plus"></i></a>
+						</li>
+						<li>
+							<a class="icoLinkedin" href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+						</li>
+					</ul><br>
+					<br>
+					<a href="mailto:support@astredu.com?Subject=Hello%20again" style="color: white" target="_top">Send us a Mail</a>
+				</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="usr">SUBSCRIBE TO ASTREDU</label> <input class="form-control" id="usr" placeholder="Email" type="text"> <a class="btn-success">SUBMIT</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+	</script>
+	 
+	<script src="js/bootstrap.min.js">
+	</script> 
+	<script src="js/custom.js">
+	</script> 
+	<script>
+	           function openNav() {
+	               if ($(window).width() > 450){
+	                   document.getElementById("main-navigation").style.width = "250px";
+	                   document.getElementById("wrapper").style.transform="translateX(250px)";
+	               }
+	               else {
+	                   document.getElementById("main-navigation").style.width = "150px";
+	                   document.getElementById("wrapper").style.transform="translateX(150px)";
+	               }
+	            }
+
+	            function closeNav() {
+	                document.getElementById("main-navigation").style.width = "0";
+	                document.getElementById("wrapper").style.transform="translateX(0px)";
+	            }
+	          
+	</script>
+</body>
+</html>
